@@ -1,0 +1,185 @@
+html, body {
+  background-color: #F5F6EB; }
+
+a:hover {
+  color: #34352C; }
+
+.ver_re_mid {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%); }
+
+a {
+  color: #34352C; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+#app header {
+  width: 100%;
+  height: 70px;
+  background-color: #C9CABB;
+  padding: 0 10%;
+  position: fixed;
+  left: 0;
+  top: 0; }
+  #app header img {
+    width: 45px;
+    height: 45px; }
+  #app header .nav-pills > li > a:hover, #app header .nav-pills > li > a:focus {
+    color: #34352C;
+    background-color: #F5F6EB; }
+  #app header .nav-pills > li.active > a, #app header .nav-pills > li.active > a:hover, #app header .nav-pills > li.active > a:focus {
+    color: #F5F6EB;
+    background-color: #34352C; }
+  #app header .title {
+    font-size: 1.4em;
+    line-height: 70px;
+    vertical-align: middle;
+    margin: 0 0 0 0.5em; }
+#app .work {
+  height: 600px; }
+  #app .work .container {
+    width: 80%;
+    height: 100%;
+    padding-top: 1em;
+    background-color: #EFF0DC;
+    margin-top: 80px; }
+    #app .work .container .workRecord {
+      width: 70%;
+      height: 100%;
+      border-radius: 1em;
+      display: inline-block; }
+      #app .work .container .workRecord li {
+        border-bottom: solid 0.1em #C9CABB;
+        color: #34352C;
+        font-size: 1.2em;
+        height: 90px;
+        line-height: 2.8em;
+        vertical-align: middle;
+        padding: 0 0.5em;
+        cursor: pointer;
+        transition: height 0.5s;
+        -moz-transition: height 0.5s;
+        /* Firefox 4 */
+        -webkit-transition: height 0.5s;
+        /* Safari and Chrome */
+        -o-transition: height 0.5s;
+        /* Opera */ }
+        #app .work .container .workRecord li blockquote {
+          border-left: none; }
+          #app .work .container .workRecord li blockquote small {
+            opacity: 1;
+            transition: opacity 0.5s;
+            -moz-transition: opacity 0.5s;
+            /* Firefox 4 */
+            -webkit-transition: opacity 0.5s;
+            /* Safari and Chrome */
+            -o-transition: opacity 0.5s;
+            /* Opera */ }
+        #app .work .container .workRecord li .content {
+          font-size: 1em;
+          position: absolute;
+          left: 16%;
+          margin-top: -50px;
+          opacity: 0;
+          width: 45%;
+          height: 50px;
+          white-space: pre-wrap;
+          -ms-word-wrap: break-word;
+          word-wrap: break-word;
+          line-height: 1.5;
+          overflow: hidden;
+          letter-spacing: 0.1em;
+          text-overflow: ellipsis;
+          -o-text-overflow: ellipsis;
+          transition: opacity 0.5s;
+          -moz-transition: opacity 0.5s;
+          /* Firefox 4 */
+          -webkit-transition: opacity 0.5s;
+          /* Safari and Chrome */
+          -o-transition: opacity 0.5s;
+          /* Opera */ }
+        #app .work .container .workRecord li .title {
+          font-size: 1.2em;
+          transition: font-size 0.5s;
+          -moz-transition: font-size 0.5s;
+          /* Firefox 4 */
+          -webkit-transition: font-size 0.5s;
+          /* Safari and Chrome */
+          -o-transition: font-size 0.5s;
+          /* Opera */
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          -o-text-overflow: ellipsis;
+          overflow: hidden; }
+        #app .work .container .workRecord li .bottom {
+          opacity: 0;
+          position: absolute;
+          left: 50%;
+          transition: font-size 0.5s;
+          -moz-transition: font-size 0.5s;
+          /* Firefox 4 */
+          -webkit-transition: font-size 0.5s;
+          /* Safari and Chrome */
+          -o-transition: font-size 0.5s;
+          /* Opera */
+          transition: opacity 0.5s;
+          -moz-transition: opacity 0.5s;
+          /* Firefox 4 */
+          -webkit-transition: opacity 0.5s;
+          /* Safari and Chrome */
+          -o-transition: opacity 0.5s;
+          /* Opera */ }
+          #app .work .container .workRecord li .bottom .time {
+            font-size: 0.8em; }
+      #app .work .container .workRecord li:hover {
+        background-color: #F5F6EB;
+        height: 150px; }
+        #app .work .container .workRecord li:hover blockquote small {
+          opacity: 0; }
+        #app .work .container .workRecord li:hover .bottom, #app .work .container .workRecord li:hover .title {
+          font-size: 1em;
+          opacity: 1; }
+        #app .work .container .workRecord li:hover .content {
+          opacity: 1; }
+    #app .work .container .labelTab {
+      margin-bottom: 10px;
+      width: 100%; }
+      #app .work .container .labelTab tr {
+        width: 100%; }
+        #app .work .container .labelTab tr td {
+          width: 10%;
+          text-align: center;
+          cursor: pointer;
+          color: #C9CABB;
+          border-radius: 5px;
+          margin-right: 1%;
+          display: inline-block; }
+        #app .work .container .labelTab tr .active, #app .work .container .labelTab tr td:hover {
+          background-color: #F5F6EB;
+          color: #34352C; }
+
+@media screen and (max-width: 992px) {
+  #home header {
+    padding: 0 10%; }
+  #home .container {
+    width: 85%;
+    padding-top: 1em;
+    margin-top: 10px; } }
+@media screen and (max-width: 768px) {
+  #home header {
+    padding: 0 5%; }
+  #home .container {
+    width: 95%;
+    padding-top: 1em;
+    margin-top: 10px; } }
+
+/*# sourceMappingURL=myStyle.css.map */

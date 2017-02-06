@@ -1,0 +1,200 @@
+$color1:#F5F6EB;
+$color2:#EFF0DC;
+$color3:#C9CABB;
+$color4:#34352C;
+$screen_min:768px;
+$screen_mid:992px;
+$screen_max:1200px;
+@mixin transition($attr,$time){
+  transition:$attr $time;
+  -moz-transition:$attr $time; /* Firefox 4 */
+  -webkit-transition:$attr $time; /* Safari and Chrome */
+  -o-transition:$attr $time; /* Opera */
+}
+@mixin ell_nowrap(){
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  -o-text-overflow:ellipsis;
+  overflow: hidden;
+}
+html,body{
+  background-color: $color1;
+}
+a:hover{
+  color: $color4;
+}
+//元素按父元素垂直对齐
+.ver_re_mid{
+  position: relative;
+  top:50%;
+  -webkit-transform: translate(0,-50%);
+  -moz-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  -o-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+}
+a{
+  color: $color4;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+#app{
+  header{
+    width:100%;
+    height:70px;
+    background-color: $color3;
+    padding:0 10%;
+    position: fixed;
+    left:0;
+    top:0;
+    img{
+      width:45px;
+      height:45px;
+    }
+    .nav-pills>li>a:hover, .nav-pills>li>a:focus{
+      color: $color4;
+      background-color: $color1;
+    }
+    .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{
+      color: $color1;
+      background-color: $color4;
+    }
+    .title{
+      font-size: 1.4em;
+      line-height: 70px;
+      vertical-align: middle;
+      margin:0 0 0 0.5em;
+    }
+  }
+  .work{
+    height:600px;
+    .container{
+      width: 80%;
+      height: 100%;
+      padding-top:1em;
+      background-color: $color2;
+      margin-top:80px;
+      .workRecord{
+        width: 70%;
+        height:100%;
+        border-radius: 1em;
+        display: inline-block;
+        li{
+          border-bottom:solid 0.1em $color3;
+          color: $color4;
+          font-size: 1.2em;
+          height:90px;
+          line-height: 2.8em;
+          vertical-align: middle;
+          padding:0 0.5em;
+          cursor: pointer;
+          @include transition(height,0.5s);
+          blockquote{
+            border-left: none;
+            small{
+              opacity: 1;
+              @include transition(opacity,0.5s);
+            }
+          }
+          .content{
+            font-size: 1em;
+            position: absolute;
+            left: 16%;
+            margin-top:-50px;
+            opacity: 0;
+            width:45%;
+            height:50px;
+            white-space: pre-wrap;
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
+            line-height: 1.5;
+            overflow: hidden;
+            letter-spacing: 0.1em;
+            text-overflow:ellipsis;
+            -o-text-overflow:ellipsis;
+            @include transition(opacity,0.5s);
+          }
+          .title{
+            font-size: 1.2em;
+            @include transition(font-size,0.5s);
+            @include ell_nowrap;
+          }
+          .bottom{
+            opacity:0;
+            position: absolute;
+            left: 50%;
+            @include transition(font-size,0.5s);
+            @include transition(opacity,0.5s);
+            .time{
+              font-size: 0.8em;
+            }
+          }
+        }
+        li:hover{
+          background-color: $color1;
+          height:150px;
+          blockquote{
+            small{
+              opacity: 0;
+            }
+          }
+          .bottom,.title{
+            font-size: 1em;
+            opacity: 1;
+          }
+          .content{
+            opacity: 1;
+          }
+        }
+      }
+      .labelTab{
+        margin-bottom:10px;
+        width:100%;
+        tr{
+          width:100%;
+          td{
+            width:10%;
+            text-align: center;
+            cursor: pointer;
+            color: $color3;
+            border-radius: 5px;
+            margin-right:1%;
+            display: inline-block;
+          }
+          .active,td:hover{
+            background-color: $color1;
+            color: $color4;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:$screen_mid){
+  #home {
+    header {
+      padding:0 10%;
+    }
+    .container{
+      width: 85%;
+      padding-top:1em;
+      margin-top:10px;
+    }
+  }
+}
+@media screen and (max-width:$screen_min){
+  #home {
+    header {
+      padding:0 5%;
+    }
+    .container{
+      width: 95%;
+      padding-top:1em;
+      margin-top:10px;
+    }
+  }
+}

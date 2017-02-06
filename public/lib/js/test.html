@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    var obj = {
+        yang: 'yang',
+        lin: 'lin',
+        yao: 'yao',
+        dateTest: new Date(2011, 11, 1)
+    };
+    var jsonS = JSON.stringify(obj, function (key, value) {
+        switch (key) {
+            case 'yang':
+                return undefined;
+            case 'yao':
+                return value + 'jjj';
+            case 'lin':
+                return value + 'jjo';
+            default:
+                return value
+        }
+    }, 4);
+    console.log(JSON.parse(jsonS, function (key, value) {
+        if (key == 'dateTest') {
+            return new Date(value);
+        } else {
+            return value;
+        }
+    }));
+</script>
+</html>
