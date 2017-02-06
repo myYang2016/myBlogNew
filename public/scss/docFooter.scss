@@ -1,0 +1,86 @@
+$color1:#F5F6EB;
+$color2:#EFF0DC;
+$color3:#C9CABB;
+$color4:#34352C;
+@mixin mid{
+  position: relative;
+  top:50%;
+  left:50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#docFooter{
+  .doc_comments{
+    width:100%;
+    display: block;
+    resize: none;
+    padding:10px;
+  }
+  .yourComments{
+    border-top: solid 1px $color4;
+    .yourEva{
+      span{
+        color: #646464;
+        font-size: 15px;
+      }
+    }
+    form{
+      .btn_comments_sub{
+        background-color: $color4;
+        color: $color1;
+        margin:10px;
+      }
+      .form-control{
+        margin-bottom: 10px;
+        max-width:400px;
+      }
+    }
+  }
+
+  .comments{
+    padding-left:0;
+    li{
+      width: 100%;
+      list-style: none;
+      border-top:1px solid $color3;
+      padding: 10px;
+      .btn{
+        float: right;
+        position: relative;
+        top: -35px;
+        background-color: $color2;
+        color: $color4;
+        font-size: 12px;
+      }
+      .txt{
+        padding:0 10px;
+        margin:10px 0;
+        white-space: pre-wrap;
+        -ms-word-wrap: break-word;
+        word-wrap: break-word;
+      }
+      .time{
+        color: $color3;
+      }
+      .like{
+        background-color: $color1;
+        font-size: 15px;
+        float: right;
+        position: relative;
+        top:-22px;
+        cursor: pointer;
+        span{
+          position: relative;
+          top: -3px;
+          left: 0.4rem;
+        }
+      }
+      .active{
+        color: red;
+      }
+    }
+  }
+}

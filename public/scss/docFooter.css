@@ -1,0 +1,54 @@
+#docFooter .doc_comments {
+  width: 100%;
+  display: block;
+  resize: none;
+  padding: 10px; }
+#docFooter .yourComments {
+  border-top: solid 1px #34352C; }
+  #docFooter .yourComments .yourEva span {
+    color: #646464;
+    font-size: 15px; }
+  #docFooter .yourComments form .btn_comments_sub {
+    background-color: #34352C;
+    color: #F5F6EB;
+    margin: 10px; }
+  #docFooter .yourComments form .form-control {
+    margin-bottom: 10px;
+    max-width: 400px; }
+#docFooter .comments {
+  padding-left: 0; }
+  #docFooter .comments li {
+    width: 100%;
+    list-style: none;
+    border-top: 1px solid #C9CABB;
+    padding: 10px; }
+    #docFooter .comments li .btn {
+      float: right;
+      position: relative;
+      top: -35px;
+      background-color: #EFF0DC;
+      color: #34352C;
+      font-size: 12px; }
+    #docFooter .comments li .txt {
+      padding: 0 10px;
+      margin: 10px 0;
+      white-space: pre-wrap;
+      -ms-word-wrap: break-word;
+      word-wrap: break-word; }
+    #docFooter .comments li .time {
+      color: #C9CABB; }
+    #docFooter .comments li .like {
+      background-color: #F5F6EB;
+      font-size: 15px;
+      float: right;
+      position: relative;
+      top: -22px;
+      cursor: pointer; }
+      #docFooter .comments li .like span {
+        position: relative;
+        top: -3px;
+        left: 0.4rem; }
+    #docFooter .comments li .active {
+      color: red; }
+
+/*# sourceMappingURL=docFooter.css.map */

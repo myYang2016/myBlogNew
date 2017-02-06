@@ -1,0 +1,23 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "my blog test",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "YXG",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "fs": "^0.0.1-security",
+    "mongodb": "^2.2.16",
+    "multer": "^1.2.1",
+    "path": "^0.12.7",
+    "polyfill": "^0.1.0",
+    "remarkable": "^1.7.1"
+  }
+}
